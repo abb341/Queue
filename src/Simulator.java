@@ -6,9 +6,12 @@ import java.util.Scanner;
  * Block:	G
  * Date:	12/2/15
  * 	
- * Program 06: Queue
+ * Program 07: Queue
  * Description:
- * 		Describe the program
+ * 		A program that simulates the queue data type. The user is presented
+ * a menu of actions that allows them to interact with the queue. They can
+ * enqueue, dequeue, check to see if the queue is full or empty, print the
+ * contents of the queue, and see all the data in the Queue class.
  * 
  ***********************************************************************************/
 public class Simulator
@@ -42,6 +45,11 @@ public class Simulator
 				+ ", s = show all data, q = quit");
 	}
 
+	/**
+	 * Perform the action specified by the user input
+	 * @param queue
+	 * @param userInput
+	 */
 	private static void doAction(Queue queue, String userInput)
 	{
 		if (userInput.equals("e"))
