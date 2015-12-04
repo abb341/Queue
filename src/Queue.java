@@ -1,4 +1,6 @@
-
+/**
+ * A holds a queue of Strings in an array
+ */
 public class Queue
 {
 
@@ -9,12 +11,20 @@ public class Queue
 	// Keep Track of the Number of Items in list
 	private int counter = 0;
 
+	/**
+	 * Set the size of the queue and the location of the rear
+	 * @param size
+	 */
 	public Queue(int size)
 	{
 		list = new String[size];
 		rear = size - 1;
 	}
 
+	/**
+	 * Add a String to the queue
+	 * @param data
+	 */
 	public void enqueue(String data)
 	{
 		if (!isFull())
@@ -25,6 +35,10 @@ public class Queue
 		}
 	}
 
+	/**
+	 * Remove a String from the queue
+	 * @return
+	 */
 	public String dequeue()
 	{
 		if (!isEmpty())
@@ -40,6 +54,10 @@ public class Queue
 		}
 	}
 
+	/**
+	 * Check to see if the queue is full
+	 * @return
+	 */
 	public boolean isFull()
 	{
 		if (counter == list.length)
@@ -52,6 +70,10 @@ public class Queue
 		}
 	}
 
+	/**
+	 * Check to see if the queue is empty
+	 * @return
+	 */
 	public boolean isEmpty()
 	{
 		if (counter > 0)
@@ -64,6 +86,9 @@ public class Queue
 		}
 	}
 
+	/**
+	 * Convert the items in the queue to a String
+	 */
 	public String toString()
 	{
 		String queueAsString = "";
@@ -76,6 +101,10 @@ public class Queue
 		return queueAsString;
 	}
 
+	/**
+	 * Convert all the data in this class to a String
+	 * @return
+	 */
 	public String getDataAsString()
 	{
 		String listAsString = "";
@@ -91,6 +120,11 @@ public class Queue
 		return listAsString;
 	}
 
+	/**
+	 * Find the next index in the array. This is important because the array wraps around.
+	 * @param index
+	 * @return
+	 */
 	private int next(int index)
 	{
 		if (index == list.length - 1)

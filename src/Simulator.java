@@ -1,4 +1,16 @@
 import java.util.Scanner;
+
+/*********************************************************************************
+ * 
+ * Name:	Aaron Brown
+ * Block:	G
+ * Date:	12/2/15
+ * 	
+ * Program 06: Queue
+ * Description:
+ * 		Describe the program
+ * 
+ ***********************************************************************************/
 public class Simulator
 {
 	private static final int SIZE = 3;
@@ -20,6 +32,9 @@ public class Simulator
 
 	}
 
+	/**
+	 * Prints out a menu of options to the console
+	 */
 	private static void displayMenu()
 	{
 		System.out.println("What would you like to Do?");
@@ -56,6 +71,10 @@ public class Simulator
 
 	}
 	
+	/**
+	 * Add a string to the queue
+	 * @param queue
+	 */
 	private static void enqueue(Queue queue)
 	{
 		if (!queue.isFull())
@@ -70,6 +89,10 @@ public class Simulator
 		}
 	}
 	
+	/**
+	 * Remove a string from the queue
+	 * @param queue
+	 */
 	private static void dequeue(Queue queue)
 	{
 		if (!queue.isEmpty())
