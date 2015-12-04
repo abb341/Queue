@@ -17,7 +17,7 @@ import java.util.Scanner;
 public class Simulator
 {
 	private static final int SIZE = 3;
-	private static Scanner user = new Scanner(System.in);
+	private static final Scanner user = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		Queue queue = new Queue(SIZE);
@@ -27,6 +27,7 @@ public class Simulator
 		userInput = user.nextLine();
 		while (!userInput.equals("q"))
 		{
+			System.out.println(userInput);
 			doAction(queue, userInput);
 			displayMenu();
 			userInput = user.nextLine();
@@ -90,6 +91,7 @@ public class Simulator
 			System.out.println("Enter a string to enqueue");
 			String data = user.nextLine();
 			queue.enqueue(data);
+			System.out.println(data);
 		}
 		else
 		{
